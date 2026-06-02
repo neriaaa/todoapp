@@ -1,0 +1,80 @@
+/* src/components/TodoForm.module.css */
+.form {
+  display: flex;
+  gap: 16px; 
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  background: var(--bg-card);
+  padding: 24px 24px; 
+  border-radius: 16px; 
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); 
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.input, .select, .dateInput {
+  padding: 14px 18px; 
+  border: 2px solid transparent; 
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: var(--bg-main); 
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  font-family: inherit;
+  color: var(--text-main);
+}
+
+.input {
+  flex-grow: 1;
+  min-width: 250px;
+}
+
+.input:focus, .select:focus, .dateInput:focus {
+  background-color: var(--bg-card); 
+  border-color: #6366f1; 
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.2); 
+  transform: translateY(-2px); 
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.button {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.25); 
+}
+
+
+.button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
+}
+
+
+.button:active {
+  transform: translateY(1px) scale(0.98);
+}
